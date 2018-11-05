@@ -14,8 +14,8 @@
 <font size=2>&nbsp;&nbsp;&nbsp;&nbsp;.日期</font>   
 <font size=2>&nbsp;&nbsp;&nbsp;&nbsp;.发布者</font>  
 
-
-2.用户浏览失物招领信息  
+2.用户管理自己发布的信息（删除，修改）  
+3.用户浏览失物招领信息  
 <font size=2>&nbsp;&nbsp;&nbsp;&nbsp;a.(根据物品种类分类浏览)  </font>  
 <font size=2>&nbsp;&nbsp;&nbsp;&nbsp;b.(根据日期浏览) </font>  
 <font size=2>&nbsp;&nbsp;&nbsp;&nbsp;c.(关键字检索浏览)   </font>  
