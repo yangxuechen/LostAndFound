@@ -26,8 +26,12 @@
 2.物品分类管理  
 
 **前台实现**  
-1.微信小程序（与java后台进行数据交互）    
+1.微信小程序（与java后台进行数据交互)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[微信小程序开发资源](https://github.com/justjavac/awesome-wechat-weapp)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可能用到的框架：Taro（多端统一开发框架，支持用 React 的开发方式编写一次代码，生成能运行在微信小程序、H5、React Native 等的应用）[链接](https://github.com/NervJS/taro)      
 2.移动端网页  
+
+
 
 **后台实现**  
 java(springboot+mybatis+mysql)
