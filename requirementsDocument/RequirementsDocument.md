@@ -25,6 +25,14 @@
 1.用户管理  
 2.物品分类管理  
 
+**前台实现**  
+1.微信小程序（与java后台进行数据交互）    
+2.移动端网页  
+
+**后台实现**  
+java(springboot+mybatis+mysql)
+
+
 **web端原型图**  
 ![index](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/userIndex.html.png)  
 ![releaseNews](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/releaseNews.html.png)
