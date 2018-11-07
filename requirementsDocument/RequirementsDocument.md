@@ -20,6 +20,7 @@
 <font size=2>&nbsp;&nbsp;&nbsp;&nbsp;b.(根据日期浏览) </font>  
 <font size=2>&nbsp;&nbsp;&nbsp;&nbsp;c.(关键字检索浏览)   </font>  
 
+4.用户的评论功能（考虑）  
   
 二.管理员功能  
 1.用户管理  
@@ -34,8 +35,14 @@
 
 
 **后台实现**  
-java(springboot+mybatis+mysql)
+java(springboot+mybatis+mysql)  
 
+**前期准备**  
+1.服务器+域名  
+2.微信开发者工具  
+
+**E-R图**  
+![E-R图](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/ER_LostAndFound.png)
 
 **web端原型图**  
 ![index](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/userIndex.html.png)  
