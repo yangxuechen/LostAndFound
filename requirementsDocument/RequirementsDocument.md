@@ -41,6 +41,9 @@ java(springboot+mybatis+mysql)
 1.服务器+域名  
 2.微信开发者工具  
 
+**用例图**  
+![userCaseDiagram](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/usecasediagram.png)  
+
 **E-R图**  
 ![E-R图](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/ER_LostAndFound.png)
 
