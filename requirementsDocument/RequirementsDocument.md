@@ -49,7 +49,16 @@ java(springboot+mybatis+mysql)
 
 **web端原型图**  
 ![index](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/userIndex.html.png)  
-![releaseNews](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/releaseNews.html.png)
+![releaseNews](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/releaseNews.html.png)  
+
+**移动端Web页面（微信小程序页面）原型图**  
+![index](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/h5/index.png)  
+![weChatLogin](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/h5/weChatLogin.png)  
+![main](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/h5/MainPage.png)  
+![main2](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/h5/MainPage_2.png)  
+![main3](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/h5/mainPage_3.png)  
+![sendMessage](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/h5/sendMessage.png)  
+![userMessage](https://github.com/yangxuechen/LostAndFound/blob/master/requirementsDocument/images/h5/userMessage.png)  
 
 
 
