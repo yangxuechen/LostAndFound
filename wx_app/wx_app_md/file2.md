@@ -112,7 +112,18 @@
       const { index, title } = e.detail;
       console.log('点击了tab:' + index, title);
     },
-  
+    
+    //图片预览
+      previewImg:function(e){
+        var imgArr=this.data.imgArr;
+        wx.previewImage({
+          current: imgArr[0],     //当前图片地址
+          urls: imgArr,               //所有要预览的图片的地址集合 数组形式
+          success: function (res) { },
+          fail: function (res) { },
+          complete: function (res) { },
+        });
+      },
     /* 省去了小程序的生命周期函数等*/
    
   })
