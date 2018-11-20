@@ -1,6 +1,6 @@
 ###微信小程序项目之失物招领平台-5.我的主页页面编写  
 1.先附上我的主页的效果图  
-![wx_project_6](https://github.com/yangxuechen/LostAndFound/blob/master/wx_app/wx_app_images/wx_project_6.jpg)
+![wx_project_6](https://github.com/yangxuechen/LostAndFound/blob/master/wx_app/wx_app_images/wx_project_6.jpg)  
 2.userMsg.js文件  
 ```javascript
  // pages/userMsg/userMsg.js
