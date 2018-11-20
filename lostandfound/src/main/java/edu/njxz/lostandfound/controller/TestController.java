@@ -1,0 +1,30 @@
+package edu.njxz.lostandfound.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import edu.njxz.lostandfound.entity.Comment;
+import edu.njxz.lostandfound.entity.Message;
+import edu.njxz.lostandfound.service.TestService;
+
+@Controller
+public class TestController {
+
+	@Autowired
+	private TestService tess;
+
+	@RequestMapping("/test")
+	public String test() {
+		
+		List<Message> messages = tess.showAllMessage();
+		List<List<Comment>> comments = null;
+		for(int i = 0; i < messages.size(); i++) {
+			comments.add(tess.showAllCommentByMessageId(messages.get(i).getMessageId()));
+		}
+		return "test";
+	}
+	
+}

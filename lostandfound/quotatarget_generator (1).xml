@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE generatorConfiguration
+   PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+  <generatorConfiguration>
+     <!--数据库驱动-->
+   
+  <!-- <classPathEntry    location="‪F:\jdbc\mysql-connector-java-5.0.8-bin.jar"/>  -->
+     <context id="DB2Tables"    targetRuntime="MyBatis3">
+         <commentGenerator>
+             <property name="suppressDate" value="true"/>
+             <property name="suppressAllComments" value="true"/>
+         </commentGenerator> 
+         <!--数据库链接地址账号密码-->
+         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.11.124.145:3306/lostandfound" userId="root" password="root">
+         </jdbcConnection>
+         <javaTypeResolver>
+             <property name="forceBigDecimals" value="false"/>
+         </javaTypeResolver>
+         <!--生成Model类存放位置-->
+         <javaModelGenerator targetPackage="edu.njxz.lostandfound.entity" targetProject="lostandfound/src/main/java">
+             <property name="enableSubPackages" value="true"/>
+             <property name="trimStrings" value="true"/>
+         </javaModelGenerator>
+         <!--生成映射文件存放位置-->
+         <sqlMapGenerator targetPackage="mapper" targetProject="lostandfound/src/main/resources">
+             <property name="enableSubPackages" value="true"/>
+         </sqlMapGenerator>
+         <!--生成Dao类存放位置-->
+         <javaClientGenerator type="XMLMAPPER" targetPackage="edu.njxz.lostandfound.mapper" targetProject="lostandfound/src/main/java">
+             <property name="enableSubPackages" value="true"/>
+         </javaClientGenerator>
+         <!--生成对应表及类名-->
+      <!--   <table tableName="t_attach" domainObjectName="Attach" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+         <table tableName="t_comments" domainObjectName="Comment" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+         <table tableName="t_contents" domainObjectName="Content" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+         <table tableName="t_logs" domainObjectName="Log" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+         <table tableName="t_metas" domainObjectName="Meta" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+         <table tableName="t_options" domainObjectName="Option" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+         <table tableName="t_relationships" domainObjectName="Relationship" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+          <table tableName="t_users" domainObjectName="User" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+             -->
+             <!-- 
+              <table tableName="lf_user" domainObjectName="User" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+               <table tableName="lf_message" domainObjectName="Message" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+               <table tableName="lf_category" domainObjectName="Category" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+                -->
+                <table tableName="lf_comment" domainObjectName="Comment" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+                 
+                 
+     </context>
+ </generatorConfiguration>
