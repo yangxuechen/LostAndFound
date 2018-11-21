@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-test 111111
+	<table border="1">
+		<tr>
+			<td>发布人id</td>
+			<td>详细描述</td>
+			<td>物品类别id</td>
+			<td>日期</td>
+		</tr>
+		<tr th:each="m : ${messages}">
+			<td th:text="${m.messageUserId}"/>
+			<td th:text="${m.messageDescription}"/>
+			<td th:text="${m.messageCategotyid}"/>
+			<td th:text="${m.messageDate}"/>
+		</tr>
+	</table>
 </body>
 </html>
