@@ -1,0 +1,42 @@
+<!--pages/userMsg/mySend/mySend.wxml-->
+ <!--内容-->
+<view>
+   <view class='page'>
+      <!--循环遍历失物招领内容 -->
+      <block wx:for="{{queryResult}}" wx:for-item="item" wx:for-index="index">
+          <view class='body'>
+          <view class='author'>
+             	<w-avatar src="{{item.avatarUrl}}">W</w-avatar>  <!--头像 -->
+               <text>{{item.author}}</text> <!--用户名 -->
+
+             
+                  <image src='/images/wx_app_delete.jpg' class='options-image' catchtap='delete' data-post-id="{{index}}"></image>
+              
+               
+          </view>
+             <!-- 文本内容-->
+             <text class='content'>{{item.content}}</text>
+        <!--图片内容 -->
+     <view class='content-img' wx:if="{{item.imgsFileId.length!=0}}">
+            <image src='{{item.imgsFileId}}' class='image' bindtap='previewImg' data-index="{{index}}"></image>
+       </view>
+       <view class='date-comment'>
+           <!-- 日期-->
+           <text class='date-content'>{{item.date}}</text>
+           <!--评论 -->
+           <view catchtap='onTapToComment' data-post-id="{{item._id}}">
+                        <image src='/images/wx_app_comment.jpg' class='comment-image'></image>
+           <text class='comment-count'>{{item.commentSize}}</text>
+           </view>
+
+       </view>
+      </view>
+      <!-- 分割线-->
+      <view class='divLine'></view>
+      </block>
+      <!-- 解决底部导航栏遮挡部分内容的问题-->
+      <view class='save-bottom'></view>
+    
+   </view>
+     
+</view> 

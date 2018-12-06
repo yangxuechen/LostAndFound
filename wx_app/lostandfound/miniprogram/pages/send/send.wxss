@@ -1,0 +1,63 @@
+/* pages/send/send.wxss */
+.tabs{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.main-background{
+  background-color: whitesmoke
+}
+.picker{
+  background-color: white;
+  height: 80rpx;
+  margin-top: 20rpx;
+
+}
+.big-logos {
+  float: left;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 100%;
+  height: 200rpx;
+  border: 1px solid #ccc;
+}
+.big-logos .big-logos_img {
+  float: left;
+  width: 100%;
+  height: 200rpx;
+}
+.big-logos .big-logos_img image {
+  float: left;
+  width: 250rpx;
+  height: 200rpx;
+}
+
+
+
+.big-logos .logoinfo {
+  float: left;
+ width: 250rpx;
+  height: 200rpx;
+  margin-top: -196rpx;
+}
+.big-logos .logoinfo image {
+  float: left;
+  width: 250rpx;
+  height: 200rpx;
+}
+.delete-btn{
+  width: 10%;
+  height: 50rpx;
+}
+.submit-btn-view{
+  margin-top: 50rpx;
+}
+.submit-btn{
+   background-color: green;
+   color: white;
+}
+
+.space{
+  width: 100%;
+  height: 80rpx;
+}

@@ -1,0 +1,122 @@
+@import '../common/theme/global.wxss';
+.wuss-calendar-date-day {
+  display: flex;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wuss-calendar-date-day.renderRange {
+  background-color: rgba(255, 153, 0, 0.1);
+}
+
+.wuss-calendar-container .bgwhite {
+  background-color: #fff;
+}
+.wuss-calendar-container .week {
+  color: #fe8b4a;
+}
+
+.wuss-calendar-date-day.active {
+  background: #fe8b4a;
+  color: #fff;
+}
+.wuss-calendar-date-day.day-diabled {
+  color: #aaa;
+  background: #eee;
+}
+
+.wuss-calendar-item-days-text {
+  font-size: 18rpx;
+  text-overflow: ellipis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.wuss-calendar-week-content {
+  position: relative;
+  background: #ffffff;
+}
+
+.wuss-calendar-week-list {
+  /* position: absolute;
+  top: 0; */
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.wuss-calendar-date-day.unavailable {
+  color: #aaa;
+}
+
+.wuss-calendar-date-week {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 5px;
+}
+.wuss-calendar-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.wuss-calendar-item-days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.wuss-calendar-date-year-month {
+  font-size: 14px;
+  padding: 5px 0;
+  text-align: center;
+  color: #333333;
+  background: #f7f7f7;
+}
+
+.wuss-calendar-date-content {
+  background: #ffffff;
+}
+
+.wuss-calendar-container {
+  box-sizing: border-box;
+  width: 100%;
+  background: #f7f7f7;
+  transition: all 0.2s ease-in-out;
+}
+
+.wuss-calendar-header {
+  background: #ffffff;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 44px;
+  position: relative;
+}
+
+.wuss-calendar-date-btn {
+  font-size: 14px;
+  color: #333333;
+  height: 100%;
+  width: 60px;
+  margin: 0;
+}
+.wuss-calendar-title {
+  font-size: 16px;
+  line-height: 16px;
+}
+.wuss-calendar-footer {
+  height: 40px;
+  line-height: 40px;
+}
+.w-popup {
+  padding: 0!important;
+}

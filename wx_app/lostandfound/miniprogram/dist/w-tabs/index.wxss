@@ -1,0 +1,70 @@
+/*
+ * @Author: Github.Caitingwei[https://github.com/Caitingwei] 
+ * @Date: 2018-09-03 15:12:51 
+ * @Last Modified by: Github.Caitingwei[https://github.com/Caitingwei]
+ * @Last Modified time: 2018-11-02 17:33:06
+ */
+@import '../common/theme/global.wxss';
+
+page {
+  min-height: 100%;
+}
+
+.wuss-tabs-content {
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.wuss-tabs-item {
+  height: 100%;
+  min-height: 44px;
+  display: inline-block;
+  text-align: center;
+}
+
+.wuss-tabs-item-title {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: -10px;
+}
+
+.wuss-tabs-item-icon {
+  display: inline-block;
+  vertical-align: -10px;
+}
+
+.wuss-tabs-item-title.active {
+  color: rgb(69, 143, 246);
+}
+
+.wuss-tab-line-bar {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgb(69, 143, 246);
+  -webkit-transition: 0.3s, -webkit-transform 0.3s;
+  transition: 0.3s, -webkit-transform 0.3s;
+}
+
+.wuss-tabs-item-disabled {
+  color: #c9c9c9;
+}
+
+.wuss-tabs-border-none {
+  border: none !important;
+}
+
+.wuss-tabs-fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.wuss-tabs-fixed--content {
+  margin-top: 70rpx;
+}

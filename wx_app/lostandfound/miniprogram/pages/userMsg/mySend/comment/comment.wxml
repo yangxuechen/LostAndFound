@@ -1,0 +1,51 @@
+<!--pages/lostandfound/comment/comment.wxml-->
+<view class='page'>
+  <block wx:for="{{queryResult}}" wx:for-item="item" wx:for-index="index">
+      <view class='userMsg'>
+    	<w-avatar size="large" src="{{item.avatarUrl}}">W</w-avatar>
+      <view class='name-date'>
+         <text class='userMsg-name'>{{item.userName}}</text>
+         <text class='userMsg-date'>{{item.date}}</text>
+      </view>
+      
+     
+              <image wx:if="{{item.status}}" src='/images/wx_app_like.png' class='like-image' catchtap='toLike' data-comment-id="{{index}}"></image>
+              <image wx:else src='/images/wx_app_liked.png' class='like-image' catchtap='toLike'  data-comment-id="{{index}}"></image>
+         <text class='like-count'>{{item.likedCount}}</text>
+
+  </view>
+  <view>
+    <text class='comment-content'>{{item.content}}</text>
+  </view>
+  <view class='divLine'></view>
+  </block>
+     <!-- 解决底部导航栏遮挡部分内容的问题-->
+      <view class='save-bottom'></view>
+</view>
+  <!-- 固定在底部的评论框-->
+  <view class='comment-send'>
+
+       <!-- <input placeholder="写评论" maxlength="200"></input> -->
+    <image class='comment-image' src='/images/wx_app_comment.jpg'></image>
+	<!-- <w-input
+	 clear
+	 count="100"
+	 type="textarea"
+	 placeholder="评论"
+	/> -->
+
+
+    <!-- 评论表单-->
+    <form class='comment-form' bindsubmit='formSubmit'>
+    
+               <textarea placeholder="写评论" maxlength="200"  cursor-spacing="30" bindblur='bindTextAreaBlur' class='comment-input' value='{{content}}' fixed='true'></textarea>
+     
+
+
+    <view class='comment-button'>
+          <button  size='mini' class='btn' formType='submit'>发表</button>
+    </view>
+    </form>
+      
+  </view>
+

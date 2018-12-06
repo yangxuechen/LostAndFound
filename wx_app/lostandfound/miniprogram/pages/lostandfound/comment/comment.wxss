@@ -1,0 +1,102 @@
+/* pages/lostandfound/comment/comment.wxss */
+
+.page{
+  margin: 10rpx 10rpx 10rpx 10rpx;
+}
+.userMsg{
+  display: flex;
+  flex-direction: row;
+}
+
+.name-date{
+  display: flex;
+  flex-direction: column;
+}
+.userMsg-name{
+  font-size: smaller;
+  margin-left: 20rpx;
+}
+
+.userMsg-date{
+  font-size:small;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.comment-content{
+  font-size: small;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+/*分割线样式*/
+.divLine{
+  margin-top: 30rpx;
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+
+/*固定在底部的评论框*/
+.comment-send{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  border-top-style: solid;
+  border-width: 3rpx;
+  background-color: whitesmoke;
+  opacity: 1
+ 
+}
+
+.like-image{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+ right: 40rpx;
+  margin-top: 30rpx;
+}
+
+.like-count{
+  position: absolute;
+  right: 30rpx;
+  font-size: small;
+  margin-top: 40rpx;
+}
+
+.comment-form{
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  height: 100rpx;
+  width: 70%;
+
+}
+.comment-input{
+  width: 100%;
+  margin-top: 30rpx;
+  font-size: small;
+}
+.comment-image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+}
+
+.comment-button{
+  position: absolute;
+  right: 40rpx;
+  top: 20rpx;
+  height: 20rpx;
+}
+.btn{
+  background-color: whitesmoke;
+  border: solid 1px;
+}
+
+.save-bottom{
+  width: 100%;
+  height: 200rpx;
+}

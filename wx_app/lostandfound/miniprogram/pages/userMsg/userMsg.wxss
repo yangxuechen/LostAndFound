@@ -1,0 +1,59 @@
+/* pages/userMsg/userMsg.wxss */
+.tabs{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.avatar-backgrond{
+  width: 100%;
+  height: 350rpx;
+  background-color: rgb(14, 161, 14);
+}
+
+.avatar{
+
+     /* 居中 */
+  margin-top: 100rpx;  
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 161rpx;
+  height: 161rpx;
+  border-radius: 50%;
+}
+
+.userinfo-avatar{
+  margin-top: 50rpx;
+  width: 200rpx;
+  height:200rpx;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+}
+
+.userInfo{
+  display: flex;
+flex-direction: row;
+justify-content:center;
+}
+
+.username{
+  text-align: center;
+  color: white;
+}
+
+/*分割线样式*/
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+
+.function{
+  width: 100%;
+  height: 90rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}

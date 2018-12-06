@@ -1,0 +1,36 @@
+<view class="wuss-class wuss-tabs {{ !border ? 'wuss-tabs-border-none' : ''}} {{ fixed ? 'wuss-tabs-fixed' : '' }} " style="{{ styles }}">
+	<scroll-view
+	 scroll-with-animation
+	 scroll-left="{{ scrollLeft }}"
+	 scroll-x="{{ isScroll }}"
+	>
+		<view class="wuss-tabs-content">
+			<block wx:for="{{ options }}" wx:key="index">
+				<view
+				 catchtap="handleTab"
+				 data-index="{{ index }}"
+				 class="wuss-class-item wuss-tabs-item {{ item.disabled ? 'wuss-tabs-item-disabled' : '' }}"
+				 style="width:calc(100% / {{ itemThreshold > options.length ? options.length : itemThreshold }})"
+				>
+					<block wx:if="{{ item.icon }}">
+						<w-icon
+						 class="wuss-tabs-item-icon"
+						 type="{{ item.icon }}"
+						 size="{{ item.iconSize }}"
+						 color="{{ item.iconColor }}"
+						/>
+					</block>
+					<view class="wuss-tabs-item-title" style="{{ currentIndex === index ? 'color:' + activeColor + ';' : ''}} {{ item.icon ? 'margin-left: 3px;' : '' }} {{ textStyles }}">
+						{{ item.text }}
+					</view>
+				</view>
+			</block>
+			<view
+			 wx:if="{{ line }}"
+			 class="wuss-tab-line-bar"
+			 style="{{ lineStyles }}"
+			/>
+		</view>
+	</scroll-view>
+</view>
+

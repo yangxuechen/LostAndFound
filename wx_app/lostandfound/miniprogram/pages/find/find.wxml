@@ -1,0 +1,18 @@
+<!--pages/find/find.wxml-->
+<view class='container'>
+  <view >
+     <image src='/images/wx_app_select.png' class='select-image'></image>
+  </view> 
+  <view class='temp'>
+     <input placeholder="搜索" class='input' bindblur="tofind" bindfocus='update'></input>
+  </view>
+  
+
+</view>
+  
+    <view class='result-text'>
+     <text wx:if="{{selected}}" >没找到有关记录</text>
+  </view>
+<view class='tabs'>
+   <w-tabs bind:onChange="handleChange" currentIndex="2" options="{{ tabs1 }}"  line="{{ false }}"/>
+</view>

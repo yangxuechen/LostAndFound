@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "w-button": "/dist/w-button/index",
+    "w-tabs": "/dist/w-tabs/index",
+    "w-avatar": "/dist/w-avatar/index"
+  }
+}

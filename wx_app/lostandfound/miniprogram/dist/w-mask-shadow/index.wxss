@@ -1,0 +1,24 @@
+/*
+ * @Author: Github.Caitingwei[https://github.com/Caitingwei] 
+ * @Date: 2018-10-18 17:25:54 
+ * @Last Modified by:   Github.Caitingwei[https://github.com/Caitingwei] 
+ * @Last Modified time: 2018-10-18 17:25:54 
+ */
+@import '../common/theme/global.wxss';
+
+.mask-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.mask-shadow-show {
+  opacity: 1;
+  visibility: visible;
+}

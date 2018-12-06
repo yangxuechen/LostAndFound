@@ -1,0 +1,55 @@
+<!--pages/send/send.wxml-->
+<view class='main-background'>
+    <form bindreset="lostandfoundMsgFormSubmit">
+    
+        <!-- <radio-group class="radio-group" bindchange="radioChange">
+           <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+           </label>
+        </radio-group> -->
+
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      选择类别：{{array[index]}}
+    </view>
+  </picker>
+        <!-- 留下距离-->
+        <view class='space'></view>
+        <!-- 描述-->
+        <w-cell-group>
+	          <!-- <w-input clear count="200" type="textarea" placeholder="输入"	bindblur='bindTextAreaBlur'/> -->
+            <textarea placeholder="说点什么吧..." bindblur='bindTextAreaBlur' maxlength='200'></textarea>
+        </w-cell-group>
+
+         <!-- 留下距离-->
+        <view class='space'></view>
+      <label>上传图片</label>
+
+      
+      <!-- 图片上传-->
+           <view class="big-logos">
+        <view class='big-logos_img'>
+           <image bindtap="chooseImage" src='/images/wx_app_add.jpg'></image> 
+           <!-- <image bindtap="chooseImage" src='/images/wx_app_add.jpg'></image> 
+          <image bindtap="chooseImage" src='/images/wx_app_add.jpg'></image>    -->
+        </view>
+        <block wx:for="{{images}}" wx:key="{{index}}"> 
+            <view class='logoinfo'>    
+              <image src='{{item}}' catchtap='deleteImg'></image>    
+            </view>
+
+        </block>    
+      </view> 
+       <!-- 图片上传-->
+ 
+              <!-- 留下距离-->
+        <view class='space'></view>
+        <view class='submit-btn-view'>
+                 <button formType="reset" class='submit-btn' >发布</button>
+        </view>
+
+    </form>
+</view>
+<view class='tabs'>
+   <w-tabs bind:onChange="handleChange" currentIndex="1" options="{{ tabs1 }}"  line="{{ false }}"/>
+</view>

@@ -1,0 +1,52 @@
+{
+  "pages": [
+      "pages/login/login",
+    "pages/lostandfound/lostandfound",
+      "pages/index/index",
+    
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/send/send",
+    "pages/find/find",
+    "pages/userMsg/userMsg",
+    "pages/userMsg/mySend/mySend",
+    "pages/userMsg/mySend/comment/comment",
+   
+        "pages/lostandfound/comment/comment"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "晓庄失物招领",
+    "navigationBarTextStyle": "black"
+  } ,
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/lostandfound/lostandfound",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/login/login",
+          "text": "授权"
+      },
+      {
+        "pagePath": "pages/send/send",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "查询"
+      },
+      {
+        "pagePath": "pages/userMsg/userMsg",
+        "text": "我的"
+      }
+    ]
+  }
+}

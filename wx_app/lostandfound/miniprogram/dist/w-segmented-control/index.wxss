@@ -1,0 +1,61 @@
+/*
+ * @Author: Github.Caitingwei[https://github.com/Caitingwei] 
+ * @Date: 2018-10-30 17:29:29 
+ * @Last Modified by: Github.Caitingwei[https://github.com/Caitingwei]
+ * @Last Modified time: 2018-10-31 16:35:51
+ */
+@import '../common/theme/global.wxss';
+
+
+.wuss-segmented {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  position: relative;
+  margin: 15px;
+  border: 1rpx solid #ff9900;
+  overflow: hidden;
+}
+
+.wuss-segmented-view {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: opacity 200ms ease, background-color 300ms ease;
+  position: relative;
+  color: #ff9900;
+  background-color: #ffffff;
+  border-right: 1rpx solid #ff9900;
+}
+
+.wuss-segmented-view.wuss-segmented-view-active {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.wuss-segmented-view:first-child {
+  border-radius: 5px 0 0 5px;
+  border-left: none;
+}
+
+
+.wuss-segmented-view:last-child {
+  border-radius: 0 5px 5px 0;
+  border: none;
+}
+
+
+.wuss-segmented-view-hover {
+  opacity: .8;
+}
+
+.wuss-segmented-disabled {
+  opacity: .4;
+}

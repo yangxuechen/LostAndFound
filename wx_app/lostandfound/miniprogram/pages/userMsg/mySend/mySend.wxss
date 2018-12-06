@@ -1,0 +1,88 @@
+/* pages/userMsg/mySend/mySend.wxss */
+/* pages/lostandfound/lostandfound.wxss */
+
+.tabs{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.page{
+  margin: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+   margin: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.author{
+  width: 100%;
+  height: 100rpx;
+  font-size: small;
+}
+
+.content{
+   width: 100%;
+  font-size: small;
+
+}
+.contnet-img{
+  display: flex;
+  flex-direction: row;
+}
+.image{
+  width: 220rpx;
+  height: 220rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.date-content{
+  font-size: xx-small;
+}
+
+.comment-image{
+  position: absolute;
+  right: 70rpx;
+  margin-bottom: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.comment-count{
+   position: absolute;
+  right: 50rpx;
+  margin-bottom: 10rpx;
+  font-size: small;
+}
+
+/**列表图片*/
+.options-image{
+  position: absolute;
+  right: 50rpx;
+    width: 40rpx;
+  height: 40rpx;
+
+}
+
+.options{
+   margin-left: 550rpx;
+}
+.date-comment{
+  display: flex;
+  flex-direction: row;
+}
+
+/*分割线样式*/
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+  margin-top: 40rpx;
+}
+
+.save-bottom{
+  width: 100%;
+  height: 110rpx;
+}

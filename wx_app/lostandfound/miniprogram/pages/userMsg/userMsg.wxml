@@ -1,0 +1,25 @@
+<!--pages/userMsg/userMsg.wxml-->
+<!-- 头像及用户名部分 -->
+<view class='avatar-backgrond'>
+     <!-- <view class="avatar"> 
+        	<w-avatar src="{{item.avatar}}" size="large" >W</w-avatar>  <!--头像 -->
+  <!-->   </view> -->
+     <view  class='userInfo'>
+       <image src="{{userInfo.avatarUrl}}" class='userinfo-avatar'> </image>
+     </view>
+     <view class='username'>
+         <text >{{userInfo.nickName}}</text>
+     </view>
+</view>
+
+<view class='function' catchtap='toMySend'>
+  <text>我的发布</text>
+</view>
+
+<!--分割线 -->
+<view class='divLine'></view>
+
+<!-- 导航栏-->
+<view class='tabs'>
+ <w-tabs bind:onChange="handleChange" currentIndex="3" options="{{ tabs1 }}"  line="{{ false }}"/>
+</view>

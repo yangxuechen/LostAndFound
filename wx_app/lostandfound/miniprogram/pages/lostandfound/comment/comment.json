@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "评论",
+    "usingComponents": {
+      "w-avatar": "/dist/w-avatar/index",
+        "w-input": "/dist/w-input/index",
+        "w-cell-group": "/dist/w-cell-group/index"
+    }
+}
