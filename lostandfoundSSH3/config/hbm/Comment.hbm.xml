@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.njxz.found.entity.Comment" table="lf_comment" lazy="false">
+        <id name="commentId" column="comment_id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="commentContent" type="java.lang.String">
+            <column name="comment_content" length="30"/>
+        </property>
+
+        <property name="commentMessageid" type="java.lang.Integer">
+            <column name="comment_messageId"/>
+        </property>
+        <property name="commentUserid" type="java.lang.String">
+            <column name="comment_userId"/>
+        </property>
+        <property name="commentDate" type="java.util.Date">
+            <column name="comment_date"/>
+        </property>
+    </class>
+
+</hibernate-mapping>

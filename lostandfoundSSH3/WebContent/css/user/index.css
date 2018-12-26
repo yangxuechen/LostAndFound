@@ -1,0 +1,44 @@
+.avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 10px 10px 10px 10px ; 
+    
+}
+.content{
+	margin-left: 200px;
+	margin-top: 20px;
+}
+.date{
+	margin-top: 20px;
+	margin-right: 50px;
+}
+.container{
+	margin-left: 200px;
+	margin-top: 50px;
+	
+}
+
+.div{
+	width: 100%;
+	height: 2px;
+	background-color: black;
+}
+.btn{
+	width:80px;
+	height: 50px;
+	margin-left: 500px;
+	border-radius: 10px 10px 10px 10px ; 
+	background-color: #80ffff;
+	margin-top: 30px;
+}
+.content-img{
+	width: 160px;
+	height: 160px;
+}
+
+.comment-img{
+	width:30px;
+	height:30px;
+   position: absolute;
+   right: 100px;
+}

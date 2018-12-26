@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <!-- 默认访问页面 -->
+    <package name="default" extends="struts-default" namespace="/">
+        <default-action-ref name="default" />
+        <action name="default">
+            <result>index.jsp</result>
+        </action>
+    </package>
+    <!-- Struts2在2.5版本后添加strict-method-invocation(严格方法访问)，默认为true，不能使用动态方法调用功能，故需设为false -->
+    <package name="product" extends="struts-default" namespace="/"
+             strict-method-invocation="false">
+        <!-- userAction 交由spring管理 -->
+        <action name="userLogin" class="userAction" method="userLogin">
+            <result name="success">user/index.jsp</result>
+             <result name="fail">index.jsp</result>
+        </action>
+         <action name="userLogout" class="userAction" method="userLogout">
+            <result name="success">index.jsp</result>
+        </action>
+         <action name="userRegister" class="userAction" method="userRegister">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="toUserMsgPage" class="userAction" method="toUserMsgPage">
+            <result name="success">user/userMsg.jsp</result>
+        </action>
+         <action name="toIndexPage" class="userAction" method="toIndexPage">
+            <result name="success">user/index.jsp</result>
+        </action>
+        <action name="toSendPage" class="userAction" method="toSendPage">
+            <result name="yes">user/send.jsp</result>
+        </action>
+        
+        <!-- MessageAction配置 -->
+        <action name="sendMessage" class="messageAction" method="send">
+             <result name="success">user/send.jsp</result>
+        </action>
+         <action name="toCommentPage" class="messageAction" method="toCommentPage">
+             <result name="yes">user/comment.jsp</result>
+        </action>
+                <action name="toMySend" class="messageAction" method="toMySend">
+             <result name="ok">user/mySend.jsp</result>
+        </action>
+        
+         <action name="comment" class="commentAction" method="comment">
+             <result name="yes">user/comment.jsp</result>
+        </action>
+    </package>
+</struts>

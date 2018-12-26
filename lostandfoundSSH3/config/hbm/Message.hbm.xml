@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.njxz.found.entity.Message" table="lf_message" lazy="false">
+        <id name="messageId" column="message_id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="messageDescription" type="java.lang.String">
+            <column name="message_description" length="30"/>
+        </property>
+
+        <property name="messageUserid" type="java.lang.String">
+            <column name="message_userid"/>
+        </property>
+        <property name="messageCategotyid" type="java.lang.Integer">
+            <column name="message_categotyid"/>
+        </property>
+        <property name="messageDate" type="java.util.Date">
+            <column name="message_date"/>
+        </property>
+                <property name="messagePhoto" type="java.lang.String">
+            <column name="message_photo"/>
+        </property>
+    </class>
+
+</hibernate-mapping>

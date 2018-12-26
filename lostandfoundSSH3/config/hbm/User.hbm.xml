@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.njxz.found.entity.User" table="lf_user" lazy="false">
+        <id name="userId" column="user_id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="userName" type="java.lang.String">
+            <column name="user_name" length="30"/>
+        </property>
+
+        <property name="userPassword" type="java.lang.String">
+            <column name="user_password"/>
+        </property>
+        <property name="userEmail" type="java.lang.String">
+            <column name="user_email"/>
+        </property>
+        <property name="userPhoto" type="java.lang.String">
+            <column name="user_photo"/>
+        </property>
+    </class>
+
+</hibernate-mapping>

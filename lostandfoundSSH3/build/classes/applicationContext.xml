@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 开启包扫描，并注册注解 -->
+    <context:component-scan base-package="edu.njxz.found.*"/>
+    <!-- 引入属性文件 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!-- 配置C3P0连接池 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!-- 数据库连接相关信息 -->
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="driverClass" value="${jdbc.driverClass}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!-- 配置Hibernate的SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <!-- 注入连接池 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 配置Hibernate属性 -->
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop><!-- 是否展示SQL -->
+                <prop key="hibernate.hbm2ddl.auto">update</prop><!-- 是否自动创建表结构 -->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+            </props>
+        </property>
+
+        <!--配置hibernate映射文件的位置以及名称，可以使用通配符-->
+        <property name="mappingLocations"
+                  value="classpath:hbm/*.hbm.xml">
+        </property>
+    </bean>
+
+    <bean id="userDao" class="edu.njxz.found.dao.impl.UserDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="messageDao" class="edu.njxz.found.dao.impl.MessageDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="commentDao" class="edu.njxz.found.dao.impl.CommentDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="CategoryDao" class="edu.njxz.found.dao.impl.CategoryDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <!--  
+    <bean id="userService" class="edu.njxz.found.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    -->
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <!-- 注入SessionFactory -->
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 配置事务增强 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!-- 配置需要进行事务管理的方法，和事务传播行为 -->
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="user*" propagation="REQUIRED"/>
+             <tx:method name="find*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 配置切面 -->
+    <aop:config>
+        <!-- 配置切入点 com.yjq.ssh.*.service.*+.*(..)
+            * org.ssh.service.*+.*(..)
+                *：表示方法的作用域，*表示所有
+                org.ssh.service.*：表示org.ssh.service下的任何包
+                org.ssh.service.*+：表示org.ssh.service下的任何包及其子包
+                *(..)：*表示任何方法，(..)表示方法的任何参数
+         -->
+        <aop:pointcut id="pointcut" expression="execution(* edu.njxz.found.service.*+.*(..))"/>
+        <!-- 适配切入点和事务增强 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
+    </aop:config>
+</beans>
